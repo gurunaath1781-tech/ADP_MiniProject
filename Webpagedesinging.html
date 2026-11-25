@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Reset */
+* {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    font-family: Times new roman, sans-serif;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "image image"
+        "content sidebar"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    gap: 12px;
+    padding: 12px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+/* Sections Styling */
+.header {
+    grid-area: header;
+    background: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.nav {
+    grid-area: nav;
+    background: #6a89cc;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.image-section {
+    grid-area: image;
+    text-align: center;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    grid-area: content;
+    background: #ffffffcc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #78e08f;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #2f3640;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+ 
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "image"
+            "content", "sidebar"
+           
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header class="header">My Colorful Website</header>
+
+        <nav class="nav">Home | About | Gallery | Contact</nav>
+
+        <section class="image-section">
+            <img src="https://picsum.photos/800/400" alt="Sample Image">
+        </section>
+
+        <main class="content">
+            <h2>Welcome!</h2>
+            <p>This webpage uses <strong>CSS Grid</strong> to create a responsive layout. Resize the screen to see the magic!</p>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Extra links or info can go here.</p>
+        </aside>
+
+        <footer class="footer">© 2026 My Website</footer>
+    </div>
+
+</body>
+</html>
